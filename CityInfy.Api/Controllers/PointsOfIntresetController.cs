@@ -59,7 +59,7 @@ namespace CityInfy.Api.Controllers
                 finalPoints
                 );
         }
-        [HttpDelete]
+        [HttpDelete("{pointsOfIntresetId}")]
         public ActionResult<PointsOfIntresetDto> DeletePointsOfIntreset(int cityId, int pointsOfIntresetId)
         {
 
@@ -75,6 +75,24 @@ namespace CityInfy.Api.Controllers
             }
             city.pointsOfIntresets.Remove(deletePoints);
             return NoContent();
+        }
+        [HttpPut("{pointsOfIntresetId}")]
+        public ActionResult<PointsOfIntresetDto> UpdatePointsOfIntreset(int cityId, int pointsOfIntresetId, PointsOfIntresetUpdateDto pointsOfIntresetUpdate)
+        {
+            var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.id == cityId);
+            if (city == null)
+            {
+                return NotFound();
+            }
+            var updatePoints = city.pointsOfIntresets.FirstOrDefault(c => c.id == pointsOfIntresetId);
+            if (updatePoints == null)
+            {
+                return NotFound();
+            }
+            updatePoints.name = pointsOfIntresetUpdate.name;
+            updatePoints.description = pointsOfIntresetUpdate.description;
+            return NoContent();
+            
         }
     }
 }
