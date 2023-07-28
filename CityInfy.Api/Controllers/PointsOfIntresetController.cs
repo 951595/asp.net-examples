@@ -1,6 +1,7 @@
 ﻿using CityInfy.Api.Mockdata;
 using CityInfy.Api.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace CityInfy.Api.Controllers
 {
@@ -8,15 +9,30 @@ namespace CityInfy.Api.Controllers
     [Route("api/cities/{cityId}/pointsOfIntreset")]
     public class PointsOfIntresetController:ControllerBase
     {
+        private readonly ILogger<PointsOfIntresetController> _Logger;
+
+        public PointsOfIntresetController(ILogger<PointsOfIntresetController> logger)
+        {
+            _Logger = logger;
+        }
         [HttpGet]
         public ActionResult<IEnumerable<PointsOfIntresetDto>> GetPointsOfIntreset(int cityId)
         {
-            var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.id == cityId);
-            if(city == null)
+            try
             {
-                return NotFound();
+                throw new Exception("sample exception");
+                var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.id == cityId);
+                if (city == null)
+                {
+                    _Logger.LogInformation($"city with id {cityId}wasn't found when accessing the pointsofintreset..");
+                    return NotFound();
+                }
+                return Ok(city.pointsOfIntresets);
             }
-            return Ok(city.pointsOfIntresets);
+            catch(Exception ex)
+            {
+                _Logger.LogCritical($"Exception while getting points of intreset with id {cityId}..", ex);
+                return StatusCode(500,"a problem apping while hadling the request...");            }
         }
         [HttpGet("{pointsOfIntresetId}", Name ="GetPointOfIntreset")]
         public ActionResult<PointsOfIntresetDto> GetPointsOfIntresetById(int cityId, int pointsOfIntresetId)

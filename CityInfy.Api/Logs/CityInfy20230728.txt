@@ -1,0 +1,55 @@
+2023-07-28 04:43:35.510 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-28 04:43:35.601 +00:00 [DBG] Hosting starting
+2023-07-28 04:43:35.666 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: E508BFE35849ABE522AB9B192E6CC82B1CFFD228)
+2023-07-28 04:43:35.697 +00:00 [INF] Now listening on: https://localhost:7059
+2023-07-28 04:43:35.701 +00:00 [INF] Now listening on: http://localhost:5059
+2023-07-28 04:43:35.702 +00:00 [DBG] Loaded hosting startup assembly CityInfy.Api
+2023-07-28 04:43:35.703 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 04:43:35.705 +00:00 [INF] Hosting environment: Development
+2023-07-28 04:43:35.706 +00:00 [INF] Content root path: C:\Users\labuser\Desktop\asp.net-examples\CityInfy.Api\
+2023-07-28 04:43:35.708 +00:00 [DBG] Hosting started
+2023-07-28 04:43:42.870 +00:00 [DBG] Connection id "0HMSF4KS93RM0" received FIN.
+2023-07-28 04:43:42.878 +00:00 [DBG] Connection id "0HMSF4KS93RM0" accepted.
+2023-07-28 04:43:42.880 +00:00 [DBG] Connection id "0HMSF4KS93RM0" started.
+2023-07-28 04:43:42.881 +00:00 [DBG] Connection id "0HMSF4KS93RM1" accepted.
+2023-07-28 04:43:42.883 +00:00 [DBG] Connection id "0HMSF4KS93RM1" started.
+2023-07-28 04:43:42.895 +00:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-07-28 04:43:42.927 +00:00 [DBG] Connection 0HMSF4KS93RM1 established using the following protocol: "Tls12"
+2023-07-28 04:43:42.966 +00:00 [DBG] Connection id "0HMSF4KS93RM0" stopped.
+2023-07-28 04:43:42.968 +00:00 [DBG] Connection id "0HMSF4KS93RM0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-07-28 04:43:43.005 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:7059/api/cities/4/pointsOfIntreset - -
+2023-07-28 04:43:43.007 +00:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-07-28 04:43:43.035 +00:00 [DBG] 1 candidate(s) found for the request path '/api/cities/4/pointsOfIntreset'
+2023-07-28 04:43:43.042 +00:00 [DBG] Endpoint 'CityInfy.Api.Controllers.PointsOfIntresetController.GetPointsOfIntreset (CityInfy.Api)' with route pattern 'api/cities/{cityId}/pointsOfIntreset' is valid for the request path '/api/cities/4/pointsOfIntreset'
+2023-07-28 04:43:43.047 +00:00 [DBG] Request matched endpoint 'CityInfy.Api.Controllers.PointsOfIntresetController.GetPointsOfIntreset (CityInfy.Api)'
+2023-07-28 04:43:43.070 +00:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-07-28 04:43:43.073 +00:00 [INF] Executing endpoint 'CityInfy.Api.Controllers.PointsOfIntresetController.GetPointsOfIntreset (CityInfy.Api)'
+2023-07-28 04:43:43.111 +00:00 [INF] Route matched with {action = "GetPointsOfIntreset", controller = "PointsOfIntreset"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CityInfy.Api.Models.PointsOfIntresetDto]] GetPointsOfIntreset(Int32) on controller CityInfy.Api.Controllers.PointsOfIntresetController (CityInfy.Api).
+2023-07-28 04:43:43.116 +00:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-07-28 04:43:43.118 +00:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-07-28 04:43:43.120 +00:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-07-28 04:43:43.124 +00:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-07-28 04:43:43.126 +00:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-07-28 04:43:43.130 +00:00 [DBG] Executing controller factory for controller CityInfy.Api.Controllers.PointsOfIntresetController (CityInfy.Api)
+2023-07-28 04:43:43.133 +00:00 [DBG] Executed controller factory for controller CityInfy.Api.Controllers.PointsOfIntresetController (CityInfy.Api)
+2023-07-28 04:43:43.139 +00:00 [DBG] Attempting to bind parameter 'cityId' of type 'System.Int32' ...
+2023-07-28 04:43:43.144 +00:00 [DBG] Attempting to bind parameter 'cityId' of type 'System.Int32' using the name 'cityId' in request data ...
+2023-07-28 04:43:43.146 +00:00 [DBG] Done attempting to bind parameter 'cityId' of type 'System.Int32'.
+2023-07-28 04:43:43.148 +00:00 [DBG] Done attempting to bind parameter 'cityId' of type 'System.Int32'.
+2023-07-28 04:43:43.149 +00:00 [DBG] Attempting to validate the bound parameter 'cityId' of type 'System.Int32' ...
+2023-07-28 04:43:43.155 +00:00 [DBG] Done attempting to validate the bound parameter 'cityId' of type 'System.Int32'.
+2023-07-28 04:43:43.158 +00:00 [FTL] Exception while getting points of intreset with id 4..
+2023-07-28 04:43:43.160 +00:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-07-28 04:43:43.166 +00:00 [DBG] No information found on request to perform content negotiation.
+2023-07-28 04:43:43.167 +00:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-07-28 04:43:43.170 +00:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-07-28 04:43:43.173 +00:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2023-07-28 04:43:43.175 +00:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-07-28 04:43:43.184 +00:00 [INF] Executed action CityInfy.Api.Controllers.PointsOfIntresetController.GetPointsOfIntreset (CityInfy.Api) in 50.7288ms
+2023-07-28 04:43:43.187 +00:00 [INF] Executed endpoint 'CityInfy.Api.Controllers.PointsOfIntresetController.GetPointsOfIntreset (CityInfy.Api)'
+2023-07-28 04:43:43.190 +00:00 [DBG] Connection id "0HMSF4KS93RM1" completed keep alive response.
+2023-07-28 04:43:43.194 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:7059/api/cities/4/pointsOfIntreset - - - 500 - text/plain;+charset=utf-8 193.2747ms
