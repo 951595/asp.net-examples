@@ -7,5 +7,8 @@ namespace student.api.Repo.Interfaces
     {
         Task<IEnumerable<Student>> GetStudents();
         Task<Student> GetStudentById(int id);
+        Task<Student> AddStudent(Student student);
+        Task<Student> UpdateStudent(int id, Student student);
+        Task<Student> DeleteStudent(int id);
     }
 }
