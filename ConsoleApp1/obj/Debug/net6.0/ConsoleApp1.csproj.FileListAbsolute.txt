@@ -1,0 +1,15 @@
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.exe
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.deps.json
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.runtimeconfig.json
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.dll
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.pdb
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfo.cs
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.dll
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\obj\Debug\net6.0\refint\ConsoleApp1.dll
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.pdb
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.genruntimeconfig.cache
+C:\Users\labuser\Desktop\asp.net-examples\ConsoleApp1\obj\Debug\net6.0\ref\ConsoleApp1.dll
